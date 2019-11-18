@@ -1,3 +1,4 @@
+require 'pry'
 # Replace the '__' in the below methods to to make the specs pass!
 # Each '__' corresponds to a single line of code you will need to write.
 # See the example below on the left and how it should look on the right.
@@ -29,6 +30,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # release_date == 1990
   
   Movie.create do |m|
+    binding.pry
     m.title = args[title]
     m.release_date = args[release_date]
   end
